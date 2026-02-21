@@ -1,10 +1,7 @@
-
-import React from 'react';
-
 const Footer = () => {
    const navLinks = ["HOME", "TV SHOW", "MOVIES", "NEW"];
    const companyLinks = ["Privacy Policy", "Terms of Service", "Cookie Preferences", "Corporate Information"];
-   const talkLink= ["support@ercom.com", "+66 2399 1145"]
+   const talkLink= ["pritommajumder67@gmail.com", "+8801710509596"]
     return (
     <div className='bg-[#181818] text-base font-montser'>
          <footer className="footer sm:footer-horizontal w-11/12 mx-auto py-12">

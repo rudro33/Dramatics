@@ -1,14 +1,22 @@
 import React from "react";
+import { NavLink } from "react-router";
+import Avater from "../assets/Man.jpg"
 
 const Navbar = ({ searchText, setSearchText }) => {
+
+  const activeStyle = ({ isActive }) =>
+    isActive ? "text-yellow-400" : "text-white";
+
   const link = (
     <>
-      <li>HOME</li>
-      <li>TV SHOW</li>
-      <li>MOVIES</li>
-      <li>NEW</li>
+      <NavLink to='/' className={activeStyle}><li>HOME</li></NavLink>
+      <NavLink to='/show' className={activeStyle}><li>TV SHOW</li></NavLink>
+      <NavLink to='/subscription' className={activeStyle}><li onClick={() => setStep(1)}>SUBSCRIPTION</li></NavLink>
+       {/* <NavLink to='/' className={activeStyle}><li></li></NavLink> */}
+      
     </>
   );
+
   return (
    <div className="navbar bg-black/40 backdrop-blur-md text-white fixed top-0 left-0 right-0 z-100 shadow-md font-montser">
   <div className="w-11/12 mx-auto flex justify-between items-center">
@@ -81,7 +89,7 @@ const Navbar = ({ searchText, setSearchText }) => {
       <div className="ring-[#facc15] rounded-full ring-2 ring-offset-2 ring-offset-black/40">
         <img
           className="w-8"
-          src="https://i.ibb.co.com/d4nZ7D22/1755511022-918278ab50dceaf47d7ad50ebfe23252.jpg"
+          src={Avater}
           alt="User"
         />
       </div>
